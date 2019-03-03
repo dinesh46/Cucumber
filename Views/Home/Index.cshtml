@@ -1,8 +1,40 @@
-﻿@{
+﻿@model Cucumber.Models.PersonModel
+@{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container">
+    <div class="jumbotron">
+        <h1>Hello,</h1>
+        <p class="lead">
+            I'm Dinesh Narayanaswamy, Microsoft certified professional with 4+ years of experience in various .net
+            technologies and Javascript frameworks. Have also involved in upselling, team management, outsource management
+            which has helped me understand stakeholders and deliver right by the customer. Seeking a challenging
+            environment, that encourages continuous learning.
+        </p>
+        <p>
+            <a href="https://www.youracclaim.com/users/dinesh-narayanaswamy/badges" target="_blank"><i class="fa fa-2x fa-award"></i></a>
+            <a href="http://www.dinesh46.com" target="_blank"><i class="fab fa-2x fa-linkedin-in"></i></a>
+        </p>
+        <hr>
+        <p>The source code and details about the project are in git hub.</p>
+        <a href="https://github.com/dinesh46/Cucumber" role="button" target="_blank"><i class="fab fa-2x fa-github"></i></a>
+    </div>
+    <h4>Task to covert current to word format</h4>
+    <div class="row">
+        <div class="col-6">
+            <form asp-action="result" method="post">
+                <div class="form-group">
+                    @Html.TextBoxFor(m => m.FirstName, new{ @class = "form-control", placeholder = "Please enter your first name", required = ""})
+                </div>
+                <div class="form-group">
+                    @Html.TextBoxFor(m => m.LastName, new{ @class = "form-control", placeholder = "Please enter your lastname", required = ""})
+                </div>
+                <div class="form-group">
+                    @Html.TextBoxFor(m => m.Money, new{ @class = "form-control", placeholder="Please enter a decimal", required =""})
+                </div>
+                <button type="submit" class="btn btn-primary box-shadow">See Magic!</button>
+            </form>
+        </div>
+    </div>
 </div>

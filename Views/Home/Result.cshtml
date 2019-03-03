@@ -1,0 +1,12 @@
+﻿@model Cucumber.Models.PersonModel
+@{
+    ViewData["Title"] = "Result";
+}
+<div class="result-container text-center">
+    <h1><i class="fas fa-hat-wizard"></i> Magic!</h1>
+    <div>
+        <p>@Model.FullName</p>
+        <p>@Model.Money</p>
+        <p class="text-primary">@Html.Raw(Model.MoneyInWords)</p>
+    </div>
+</div>
